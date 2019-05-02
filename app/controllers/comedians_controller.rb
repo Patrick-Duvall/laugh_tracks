@@ -3,6 +3,7 @@ class ComediansController < ApplicationController
   def index
     @comedians = Comedian.all
     @specials = Special.all
+    #may need refactor
     @comedians = Comedian.where(age: params[:age]) if params[:age]
   end
 

@@ -3,7 +3,7 @@
   <p>Comedians are from: <% @comedians.each do |comedian|  %>
   <%= "#{comedian.city} \n"  %>
   <% end %> </p>
-  <p>Average Age: <%= Comedian.average_age %> </p>
+  <p>Average Age: <%= @comedians.average_age %> </p>
 
 </div>
 
