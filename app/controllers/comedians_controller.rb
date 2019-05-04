@@ -11,7 +11,7 @@ class ComediansController < ApplicationController
     @comedians = Comedian.name_sort if params[:sort] == "name"
 
     @comedians = Comedian.city_sort if params[:sort] == "city"
-
+    # require "pry"; binding.pry
   end
 
   def new

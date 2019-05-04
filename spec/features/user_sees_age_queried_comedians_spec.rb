@@ -11,7 +11,7 @@ describe "user sees age-queried comedians" do
       Special.create(name: "Walk Your Way Out", runtime_mins: 80, comedian_id: comedian_1.id)
 
       visit '/comedians'
-      save_and_open_page
+
       fill_in 'age', with: '22'
       click_button 'Filter'
       expect(page).to have_content(comedian_1.name)
@@ -33,6 +33,7 @@ describe "user sees age-queried comedians" do
     visit '/comedians'
     fill_in 'age', with: '99'
     click_button 'Filter'
+    save_and_open_page
 
   end
 
