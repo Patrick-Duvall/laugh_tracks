@@ -22,9 +22,16 @@
   <p>Specials Count: <%= Special.count %></p>
 
 </div>
+<div class ='nav'>
+<%= form_tag("/comedians", method: "get") do %>
+  <%= label_tag(:age, "Filter By Age:") %>
+  <%= text_field_tag(:age) %>
+  <%= submit_tag("Filter") %>
+<% end %>
+<a href="/comedians">All Comedians</a>
+</div>
+
 <section class='grid-container'>
-
-
 <h2>The Comedians</h2>
 <% @comedians.each do |comedian| %>
 <section class="grid-item" id="comedian-<%= comedian.id %>">
