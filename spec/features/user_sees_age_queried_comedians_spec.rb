@@ -28,4 +28,13 @@ describe "user sees age-queried comedians" do
 
     end
   end
+
+  it "Doesnt error out on non-present ages" do
+    visit '/comedians'
+    fill_in 'age', with: '99'
+    click_button 'Filter'
+
+  end
+
+
 end
