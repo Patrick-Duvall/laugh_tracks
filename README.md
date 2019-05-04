@@ -181,7 +181,10 @@ As a user, when I visit `/comedians?sort=age`
 Then I see all previous information, but all comedians are
 sorted alphabetically by the age of the comedian.
 ```
-
+```
+As a user. when I visit /comedians?age=22
+Then I see all specials statistics information for that comedian and not other comedians
+```
 
 ## Rubric
 
