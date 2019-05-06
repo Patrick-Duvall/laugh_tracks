@@ -15,6 +15,33 @@
  */
 
  img {
-   width: 20%;
+   width: 50%;
    height: auto;
  }
+
+ a {
+   color: #ff9959;
+ }
+ a:hover {
+   color: red;
+ }
+
+ #statistics {
+   background-color: brown;
+ }
+
+ .grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: #59ffaf;
+  padding: 10px;
+}
+
+.grid-item {
+  background-color: #8359ff;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  font-size: 20px;
+}

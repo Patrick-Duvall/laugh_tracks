@@ -1,6 +1,3 @@
-# As a user, when I visit `/comedians?sort=name`
-# Then I see all previous information, but all comedians are
-# sorted alphabetically by the name of the comedians.
 
 require "rails_helper"
 
@@ -21,6 +18,7 @@ describe "user may see sorted comedians" do
       comedian_2 = Comedian.create(name: "bob", age: 34, city: 'Austin')
       comedian_3 = Comedian.create(name: "xena", age: 39, city: 'Montreal')
       visit '/comedians?sort=city'
+
       expect(/City: Austin(.|\n)*City: Detroit(.|\n)*City: Montreal/).to match(page.body)
     end
   end
