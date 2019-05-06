@@ -9,7 +9,12 @@ class Comedian < ApplicationRecord
   def self.name_sort
     Comedian.order(:name)
   end
+
   def self.city_sort
     Comedian.order(:city)
+  end
+
+  def self.age_sort
+    Comedian.order(:age)
   end
 end
